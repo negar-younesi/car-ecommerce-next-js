@@ -1,0 +1,72 @@
+.container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.container:hover {
+  transform: scale(1.1);
+}
+
+.container svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4757;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.2;
+  animation: badgePop 0.3s ease-out;
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .container svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .badge {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+    min-width: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .badge {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+    min-width: 14px;
+    top: -6px;
+    right: -6px;
+  }
+}

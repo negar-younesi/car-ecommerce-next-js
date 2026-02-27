@@ -1,0 +1,152 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    background-color: #befa00;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .header h2 {
+    font-size: clamp(1.5rem, 5vw, 2.3rem);
+    border-bottom: 2px solid black;
+    width: fit-content;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .header p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    text-align: center;
+    margin: 0;
+  }
+  
+  .headerActions {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .cartLink {
+    text-decoration: none;
+  }
+  
+  .ordersLink {
+    background-color: rgba(255, 255, 255, 0.55);
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .ordersLink:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .footer {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    color: grey;
+    padding: 15px 10px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: rgb(69, 69, 69);
+  }
+  
+  .container {
+    min-height: 600px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .toastContainer {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      margin: 5px auto;
+      padding: 15px 10px;
+      padding-right: 60px;
+    }
+    
+    .headerActions {
+      top: 15px;
+      right: 15px;
+      gap: 10px;
+    }
+    
+    .container {
+      padding: 0 10px;
+    }
+    
+    .toastContainer {
+      right: 12px;
+      bottom: 12px;
+    }
+    
+    .footer {
+      padding: 12px 8px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      margin: 5px;
+      padding: 12px 8px;
+      padding-right: 50px;
+    }
+    
+    .headerActions {
+      top: 12px;
+      right: 12px;
+      gap: 8px;
+    }
+    
+    .ordersLink {
+      font-size: 0.85rem;
+      padding: 5px 8px;
+    }
+    
+    .container {
+      padding: 0 5px;
+      min-height: 500px;
+    }
+    
+    .toastContainer {
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+      align-items: stretch;
+    }
+    
+    .footer {
+      padding: 10px 5px;
+      font-size: 0.8rem;
+    }
+  }

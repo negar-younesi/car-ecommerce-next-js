@@ -1,0 +1,32 @@
+.toast {
+  background: #222;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 10px 30px;
+  animation: toastIn 0.18s ease-out;
+}
+
+.success {
+  background: #2e7d32;
+}
+
+.info {
+  background: #1565c0;
+}
+
+.error {
+  background: #c62828;
+}
+
+@keyframes toastIn {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

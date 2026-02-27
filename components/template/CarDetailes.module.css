@@ -1,0 +1,185 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .header {
+    margin: 30px 0 20px;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    text-align: center;
+  }
+  
+  .details {
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+  }
+  
+  .details div {
+    display: flex;
+    align-items: baseline;
+    margin: 15px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .details span {
+    color: gray;
+    margin-left: auto;
+    font-weight: 500;
+  }
+  
+  .details p {
+    margin-left: 10px;
+    font-weight: 600;
+    min-width: 120px;
+  }
+  
+  .descriptionTitle {
+    margin: 20px 0 10px;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    font-weight: 600;
+  }
+  
+  .descriptionText {
+    color: gray;
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .details .price {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .price p,
+  .price span {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+  
+  .price span {
+    color: #000;
+    font-weight: 700;
+  }
+  
+  .button {
+    background-color: #4caf50;
+    border: none;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin: 30px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+  }
+  
+  .buyButton {
+    background-color: #4caf50;
+    border: none;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+  }
+  
+  .buyButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin: 0 10px;
+      padding: 0 10px;
+    }
+    
+    .image {
+      max-height: 300px;
+    }
+    
+    .details {
+      padding: 12px 15px;
+    }
+    
+    .details div {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    
+    .details span {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+    
+    .details p {
+      margin-left: 0;
+      min-width: auto;
+    }
+    
+    .buttonContainer {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .buyButton {
+      width: 100%;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      margin: 0 5px;
+      padding: 0 5px;
+    }
+    
+    .image {
+      max-height: 250px;
+    }
+    
+    .details {
+      padding: 10px 12px;
+      margin: 10px 0;
+    }
+    
+    .button {
+      width: 100%;
+      padding: 12px 20px;
+    }
+  }
